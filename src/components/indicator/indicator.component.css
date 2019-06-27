@@ -1,0 +1,45 @@
+.img_content {
+  width:60px;
+  height:60px;
+}
+#indicatorContainer {
+  margin-top: -2px;
+}
+/*.canvas_div {*/
+  /*width: 78px;*/
+  /*height: 78px;*/
+  /*border: 1px solid #35D46A;*/
+  /*border-radius: 39px;*/
+/*}*/
+#waveLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.circle {
+  border-radius: 50%
+}
+.pie_left, .pie_right {
+  position: absolute;
+  top: 0;left: 0;
+}
+.left, .right {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s linear 0ms;
+}
+/*.pie_right, .right {*/
+  /*clip:rect(0,auto,auto,50px);*/
+/*}*/
+/*.pie_left, .left {*/
+  /*clip:rect(0,50px,auto,0);*/
+/*}*/
+.mask {
+  border-radius: 50%;
+  background: #FFF;
+  position: absolute;
+  text-align: center;
+}

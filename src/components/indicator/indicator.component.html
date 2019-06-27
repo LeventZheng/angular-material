@@ -1,0 +1,22 @@
+<div>
+  <div class="circle po_r center" [ngStyle]="circleStyle">
+    <div class="pie_left" [ngStyle]="pieLeftStyle"><div class="left" [ngStyle]="leftStyle"></div></div>
+    <div class="pie_right" [ngStyle]="pieRightStyle"><div class="right" [ngStyle]="rightStyle"></div></div>
+    <div class="mask po_r" [ngStyle]="maskStyle" [ngClass]="{flex_center: image,flex: image}">
+      <span [hidden]="wave||image">{{pct+'%'}}</span>
+      <div *ngIf="wave&&!image" class="canvas_div">
+        <canvas id="waveLoading"
+                [style.width]="customOptions.width-customOptions.barWidth*2+'px'"
+                [style.height]="customOptions.width-customOptions.barWidth*2+'px'"
+                [width]="(customOptions.width-customOptions.barWidth*2)*dpr"
+                [height]="(customOptions.width-customOptions.barWidth*2)*dpr">
+        </canvas>
+      </div>
+      <div *ngIf="image" class="po_a img_content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="content" class="c_333 ta_c fs_14 mt_10">{{content}}</div>
+</div>
+

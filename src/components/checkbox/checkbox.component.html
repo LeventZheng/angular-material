@@ -1,0 +1,10 @@
+<div class="flex_inline flex_align_center" (click)="onClick();$event.stopPropagation()" [ngStyle]="checkboxStyle">
+  <icon class="ui-chkbox-box" [ngClass]="{disabled:disabled}" [name]="disabled?'check-disabled':checked?'know-selected':'know-select-box'"
+    [width]="iconSize" [height]="iconSize" [color]="checked?'#35d46a':'#ccc'"></icon>
+  <!--<icon *ngIf="!checked" class="ui-chkbox-box" [name]="'know-select-box'" [width]="16" [height]="16" [color]="'#ccc'"></icon>-->
+  <!-- <input type="checkbox" [checked]="subject.checked" id="subjectid_{{section.sectionId}}{{subject.subjectId}}" (change)="changeSubject($event, role, section, subject)"> -->
+  <label style="margin-left: 8px" class="c_666 us_n ta_l" *ngIf="name" [ngStyle]="labelStyle" [ngClass]="{checked: checked}">
+    <span>{{name}}</span>
+    <ng-content></ng-content>
+  </label>
+</div>

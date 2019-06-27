@@ -1,0 +1,18 @@
+@import "./../../../../../assets/scss/variable/_colors.scss";
+.checked {
+  color: $green-500 !important;
+}
+.ui-chkbox-box {
+  margin-top: 2px;
+  &:hover {
+    cursor: pointer;
+  }
+  &.disabled {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
+label:hover {
+  cursor: pointer;
+}

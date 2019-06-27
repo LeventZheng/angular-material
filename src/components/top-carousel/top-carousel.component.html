@@ -1,0 +1,7 @@
+<header>
+  <div class="img_box" [ngStyle]="getCurrentImg(imgBannerList)">
+    <div class="flex flex_row flex_center imgspag">
+      <div class="mr_5 img_index" *ngFor="let item of imgBannerList;let i=index" [ngClass]="{img_index_active: i==curImg}"></div>
+    </div>
+  </div>
+</header>

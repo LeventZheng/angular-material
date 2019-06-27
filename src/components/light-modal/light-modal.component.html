@@ -1,0 +1,20 @@
+<div #wrapper class="wrapper flex flex_col" (click)="selfClick=true"
+  [ngClass]="{'slide-fade-in-up-quick':vertPos=='bottom','slide-fade-in-down-quick':vertPos=='top',hide_bottom: hideBottom,auto_size: embed}">
+  <div *ngIf="embed">
+    <ng-content></ng-content>
+  </div>
+  <div *ngIf="!embed" class="text_content flex_1">
+      <div class="ta_l">{{content}}</div>
+  </div>
+  <div class="operation flex flex_justify_end" *ngIf="!hideBottom">
+      <button class="btn_text_small" (click)="confirm($event)">{{confirmtext?confirmtext:"确认"}}</button>
+      <button class="btn_text_black_small" (click)="close($event)">{{canceltext ? canceltext:"取消"}}</button>
+  </div>
+  <div *ngIf="vertPos=='top'&&horzPos=='left'" class="top_left" #arrow></div>
+  <div *ngIf="vertPos=='top'&&horzPos=='right'" class="top_right" #arrow></div>
+  <div *ngIf="vertPos=='top'&&horzPos=='middle'" class="top_middle" #arrow></div>
+  <div *ngIf="vertPos=='bottom'&&horzPos=='left'" class="bottom_left" #arrow></div>
+  <div *ngIf="vertPos=='bottom'&&horzPos=='right'" class="bottom_right" #arrow></div>
+  <div *ngIf="vertPos=='bottom'&&horzPos=='middle'" class="bottom_middle" #arrow></div>
+  <div class="spread" [ngClass]="{top: vertPos=='top',bottom: vertPos=='bottom'}"></div>
+</div>

@@ -1,0 +1,34 @@
+@import "../../../../../assets/scss/variable/_colors.scss";
+div{
+  display: inline-block;
+  &:hover{
+    label{
+      color: $green-500 !important;
+    }
+  }
+}
+input[type=radio] {
+  cursor: pointer;
+  display: none;
+}
+
+input[type=radio]+label{
+  cursor: pointer;
+  background:  url("radio-normal.svg") left center no-repeat;
+  padding-left: 22px;
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  color: $grey-700;
+}
+
+input[type=radio]:checked+label{
+  background:  url("radio-checked.svg") left center no-repeat;
+  color: $green-500;
+
+}
+
+//.label:hover {
+//  color: $green-500
+//}
+

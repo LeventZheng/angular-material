@@ -1,0 +1,36 @@
+@import "./../../../../../assets/scss/variable/_colors.scss";
+.wrapper {
+  position: fixed;
+  background: rgba(54,54,54,.85);
+  border-radius: 2px;
+  padding: 8px;
+  box-sizing: border-box;
+  white-space: normal;
+  z-index: 1001;
+  .text_content {
+    font-size: 12px;
+    color: #fff;
+    line-height: 22px;
+    font-weight: normal;
+  }
+  .bottom_middle {
+    position: absolute;
+    bottom: -4px;
+    right: 50%;
+    height: 0;
+    width: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid rgba(54,54,54,.85);
+  }
+  .top_middle {
+    position: absolute;
+    top: -4px;
+    right: 50%;
+    height: 0;
+    width: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid rgba(54,54,54,.85);
+  }
+}

@@ -1,0 +1,4 @@
+<div #wrapper class="text_overflow" (mouseenter)="hover=true" (mouseleave)="hover=false">
+  {{content}}
+  <tooltip *ngIf="hover&&overflow" [horzPos]="horzPos" [vertPos]="vertPos" [content]="content"></tooltip>
+</div>

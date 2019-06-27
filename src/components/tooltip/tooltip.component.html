@@ -1,0 +1,11 @@
+<div #wrapper class="wrapper">
+  <div class="text_content">
+      <div class="ta_l">{{content}}</div>
+  </div>
+  <div *ngIf="vertPos=='top'&&horzPos=='left'" class="top_left"></div>
+  <div *ngIf="vertPos=='top'&&horzPos=='right'" class="top_right"></div>
+  <div *ngIf="vertPos=='top'&&horzPos=='middle'" class="top_middle"></div>
+  <div *ngIf="vertPos=='bottom'&&horzPos=='left'" class="bottom_left"></div>
+  <div *ngIf="vertPos=='bottom'&&horzPos=='right'" class="bottom_right"></div>
+  <div *ngIf="vertPos=='bottom'&&horzPos=='middle'" class="bottom_middle"></div>
+</div>

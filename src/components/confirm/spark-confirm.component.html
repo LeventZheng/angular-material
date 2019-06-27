@@ -1,0 +1,26 @@
+<div class="main slide-fade-in-down-quick" id="confirm" appScroll (onMousewheel)="onMousewheel($event)">
+    <div class="mask" (click)="clickMask()"></div>
+    <div class="confirm js-drag-content">
+        <section>
+            <div class="head" *ngIf="transclude&&title">
+                <div class="ta_l">{{title}}</div>
+            </div>
+
+            <div class="text_content" *ngIf="!transclude">
+                <div class="ta_l">{{content}}</div>
+            </div>
+            <div class="transclude sm_bar scrollbar" insideScroll *ngIf="transclude">
+              <ng-content></ng-content>
+            </div>
+        </section>
+        <div class="operation flex flex_justify_end" *ngIf="!btnBoxCustom">
+            <button *ngIf="!redConfirm" class="btn_primary_large mr_10 two_letter" [disabled]="confirmdisable" (click)="confirm()">{{confirmtext?confirmtext:"确认"}}</button>
+            <button *ngIf="redConfirm" class="btn_red_large mr_10 two_letter" [disabled]="confirmdisable" (click)="confirm()">{{confirmtext?confirmtext:"确认"}}</button>
+            <button *ngIf="!hideCancel" class="btn_plain_large ml_10 two_letter" (click)="close()">{{canceltext ? canceltext:"取消"}}</button>
+        </div>
+
+      <div *ngIf="btnBoxCustom">
+        <ng-content select="[data-role='btn-box']"></ng-content>
+      </div>
+    </div>
+</div>
